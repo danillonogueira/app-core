@@ -27,6 +27,8 @@
   }
 
   .container {
+    align-items: center;
+    display: flex;
     width: 100%;
     height: 100%;
   }
