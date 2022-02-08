@@ -1,14 +1,20 @@
 <template>
   <SideBar />
+  <Table />
 </template>
 
 <script>
+  // import Vue from 'vue';
   import SideBar from './components/SideBar'
+  import Table from 'app_pkg_1/Table';
+
+  // Vue.component("Table", () => import("app_pkg_1/Table.vue"))
 
   export default {
     name: 'App',
     components: {
-      SideBar
+      SideBar,
+      Table,
     }
   }
 </script>
