@@ -5,7 +5,14 @@ module.exports = {
       .use(require('webpack').container.ModuleFederationPlugin, [{
         name: 'app_core',
         remotes: {
-          stats: "app_pkg_1@http://localhost:8000/remoteEntry.js",
+          app_pkg_1: "app_pkg_1@http://localhost:8000/remoteEntry.js",
+        },
+        filename: "remoteEntry.js",
+        shared: {
+          vue: {
+            eager: true,
+            singleton: true,
+          },
         },
       }]);
   },

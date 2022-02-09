@@ -1,14 +1,17 @@
 <template>
   <SideBar />
+  <Table />
 </template>
 
 <script>
   import SideBar from './components/SideBar'
+  import Table from 'app_pkg_1/Table';
 
   export default {
     name: 'App',
     components: {
-      SideBar
+      SideBar,
+      Table,
     }
   }
 </script>
