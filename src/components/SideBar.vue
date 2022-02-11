@@ -1,5 +1,7 @@
 <template>
-  <div class="sidebar"></div>
+  <div class="sidebar">
+    <img src="./logo.png" />
+  </div>
 </template>
 
 <script>
@@ -13,5 +15,8 @@
     width: 250px;
     background: #EEE;
     height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 </style>

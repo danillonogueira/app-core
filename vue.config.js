@@ -1,8 +1,7 @@
 module.exports = {
   publicPath: 'http://localhost:8080/',
   chainWebpack: (config) => {
-    config
-      .plugin('module-federation-plugin')
+    config.plugin('module-federation-plugin')
       .use(require('webpack').container.ModuleFederationPlugin, [
         {
           name: 'app_core',

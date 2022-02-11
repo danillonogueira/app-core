@@ -1,17 +1,19 @@
 <template>
   <SideBar />
-  <Table />
+  <div class="display">
+    <CasaDeCheck />
+  </div>
 </template>
 
 <script>
   import SideBar from './components/SideBar'
-  import Table from 'app_pkg_1/Table';
+  import CasaDeCheck from 'app_pkg_1/CasaDeCheck';
 
   export default {
     name: 'App',
     components: {
       SideBar,
-      Table,
+      CasaDeCheck,
     }
   }
 </script>
@@ -34,5 +36,9 @@
     display: flex;
     width: 100%;
     height: 100%;
+  }
+
+  .display {
+    padding: 20px;
   }
 </style>
