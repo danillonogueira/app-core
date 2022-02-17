@@ -2,7 +2,7 @@
   <SideBar />
   <div class="display">
     <CasaDeCheck />
-    <my-react-component />
+    <div ref="btn"></div>
   </div>
 </template>
 
@@ -10,32 +10,22 @@
   import SideBar from './components/SideBar'
   import CasaDeCheck from 'app_pkg_1/CasaDeCheck';
   import Button from 'app_pkg_2/Button';
-  import ReactDOM from 'react-dom';
-  import { h } from 'vue';
+  import renderReactComponent from './renderReactComponent';
 
   export default {
     name: 'App',
     components: {
       SideBar,
       CasaDeCheck,
-      'my-react-component': {
-        render() {
-          return h('div');
-        },
-        components: {
-          render() {
-            return h('div')
-          },
-          mounted() {
-            ReactDOM.render(
-              <Button />,
-              this.$refs.react
-            );
-          }
-        },
-        
-      }
     },
+    mounted() {
+      const ref = this.$refs.btn;
+
+      renderReactComponent({
+        component: Button,
+        ref
+      });
+    }
   }
 </script>
 

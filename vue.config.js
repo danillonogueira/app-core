@@ -7,7 +7,7 @@ module.exports = {
           name: 'app_core',
           remotes: {
             app_pkg_1: 'app_pkg_1@http://localhost:8081/remoteEntry.js',
-            app_pkg_2: 'app_pkg_2@http://localhost:8002/remoteEntry.js'
+            app_pkg_2: 'app_pkg_2@http://localhost:8082/remoteEntry.js'
           },
           filename: 'remoteEntry.js',
           shared: {
